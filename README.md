@@ -1,14 +1,10 @@
+<p align="center"><img src=".github/ranks.svg" alt="Ranks" width="300">
+
 <p align="center">
-  <a href="https://zaimea.com/" target="_blank">
-    <img src=".github/ranks.svg" alt="Ranks" width="300">
-  </a>
-</p>
-<p align="center">
-  Ranks for Models
-<p>
-<p align="center">
-    <a href="https://github.com/zaimealabs/ranks/actions/workflows/ranks-tests.yml"><img src="https://github.com/zaimealabs/ranks/actions/workflows/ranks-tests.yml/badge.svg" alt="Ranks Tests"></a>
-    <a href="https://github.com/zaimealabs/ranks/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-Mit-brightgreen.svg" alt="License"></a>
+    <a href="https://github.com/zaimealabs/ranks/actions"><img src="https://github.com/zaimealabs/ranks/actions/workflows/ranks-tests.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://packagist.org/packages/zaimea/ranks"><img src="https://img.shields.io/packagist/dt/zaimea/ranks" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/zaimea/ranks"><img src="https://img.shields.io/packagist/v/zaimea/ranks" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/zaimea/ranks"><img src="https://img.shields.io/packagist/l/zaimea/ranks" alt="License"></a>
 </p>
 <div align="center">
   Hey 👋 thanks for considering making a donation, with these donations I can continue working to contribute to ZaimeaLabs projects.
@@ -16,75 +12,39 @@
   [![Donate](https://img.shields.io/badge/Via_PayPal-blue)](https://www.paypal.com/donate/?hosted_button_id=V6YPST5PUAUKS)
 </div>
 
-Support     | Function 
------------ | ----------------------
-`MySql`     | `rank()`, `rankTime()`
-`MariaDB`   | `rank()`, `rankTime()`
-`Pgsql`     | `rank()`, `rankTime()` [NotTested]
-`Sqlite`    | `rank()`, `rankTime()` [NotTested]
-`SqlServer` | `rank()`, `rankTime()` [NotTested]
+## Introduction
 
-## Usage
+Ranks is a lightweight yet powerful package that allows you to generate rankings directly from your Eloquent models and queries.
+It computes positions, score totals, and rank ordering using optimized SQL window functions—without heavy computations in PHP.
 
-To generate a rank for your model, import the `ZaimeaLabs\Ranks\Rank` class and pass along a model or query.
-`::model()` come as it is.
-`::query()` allow you to use additional filter like `where()`.
-`->select(['column'])` to group your result.
+This package is ideal for:
 
-```php
-    $model = Rank::model(Match::class)
-        ->between(
-            start: now()->startOfYear(),
-            end: now()->endOfYear(),
-        )
-        ->select(['user_id'])
-        ->rank('scored');
+✅ Leaderboards and scoring systems
+✅ Gamification features
+✅ Ranking users, teams, or items
+✅ Aggregated statistics over time
+✅ Any application that requires fast, database-driven ranking logic
 
-    $query = Rank::query(Match::whereNotNull('user_id'))
-        ->between(
-            start: now()->startOfYear(),
-            end: now()->endOfYear(),
-        )
-        ->select(['user_id'])
-        ->rank('scored')
+## Official Documentation
 
-    $query = Rank::query(Match::where('type', 'csgo'))
-        ->dateColumn('played_at')
-        ->between(
-            start: now()->startOfYear(),
-            end: now()->endOfYear())
-        ->select(['user_id'])
-        ->rankTime('duration');
-```
-## Select Column
+Documentation for Socialite-Extender can be found on the [Zaimea website](https://zaimea.com/docs/ranks).
 
-To select columns just use `select(['name'])`
-```php
-->select(['name', 'csgo'])
-```
+## Contributing
 
-## Date Column
+Thank you for considering contributing to Socialite-Extender! The contribution guide can be found in the [Zaimea documentation](https://zaimea.com/docs/open-source/contributions).
 
-If your column is not `created_at` just use `dateColumn('pointed_date_column')`
-```php
-->dateColumn('pointed_date_column')
-```
+## Code of Conduct
 
-## Rank Alias
-You can set custom rank alias:
-```php
-->rankAlias('score_rank')
-```
+To ensure that the Zaimea open-source ecosystem remains welcoming and respectful, please review and follow our [Code of Conduct](https://zaimea.com/docs/open-source/contributions#code-of-conduct).
 
-## Sum Alias
-You can set custom sum alias:
-```php
-->sumAlias('score_sum')
-```
+## Security Vulnerabilities
 
-### Ranks
-***You can use the following ranks:***  
-Function       | Parameter
--------------- | -----------
-`->rank()`     | `'column'`
-`->rankTime()` | `'column'`
+Please review [our security policy](https://github.com/zaimealabs/ranks/security/policy) on how to report security vulnerabilities.
+
+## Support
+
+For issues or suggestions: [GitHub Issues](https://github.com/zaimealabs/ranks/issues)
+
+## License
+
+Ranks is open-sourced software licensed under the [MIT license](LICENSE).

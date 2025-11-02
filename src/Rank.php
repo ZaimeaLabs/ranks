@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Ranks;
+namespace Zaimea\Ranks;
 
 use Error;
 use Illuminate\Database\Eloquent\Builder;

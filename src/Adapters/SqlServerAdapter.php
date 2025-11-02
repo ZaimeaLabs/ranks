@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Ranks\Adapters;
-
-use Error;
+namespace Zaimea\Ranks\Adapters;
 
 class SqlServerAdapter extends AbstractAdapter
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Ranks\Adapters;
+namespace Zaimea\Ranks\Adapters;
 
 abstract class AbstractAdapter
 {

@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace ZaimeaLabs\Ranks\Adapters;
+namespace Zaimea\Ranks\Adapters;
 
-class MySqlAdapter extends AbstractAdapter
+class SqliteAdapter extends AbstractAdapter
 {
     /**
-     * Define the rank time format for MySql.
+     * Define the rank time format for Sqlite.
      *
      * @param  string  $column
      * @return string
      */
     public function rankTime(string $column): string
     {
-        return "TIME_TO_SEC({$column})";
+        return "time({$column})";
     }
 }
