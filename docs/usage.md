@@ -1,7 +1,10 @@
 ---
 title: How to use package
 description: How to use package
-github: https://github.com/zaimealabs/ranks/edit/main/
+github: https://github.com/zaimealabs/ranks/edit/main/docs
+onThisArticle: true
+sidebar: true
+rightbar: true
 ---
 
 # Ranks Usage
