@@ -1,7 +1,7 @@
 <p align="center"><img src=".github/ranks.svg" alt="Ranks" width="300">
 
 <p align="center">
-    <a href="https://github.com/zaimealabs/ranks/actions"><img src="https://github.com/zaimealabs/ranks/actions/workflows/ranks-tests.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/zaimealabs/ranks/actions"><img src="https://github.com/zaimealabs/ranks/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
     <a href="https://packagist.org/packages/zaimea/ranks"><img src="https://img.shields.io/packagist/dt/zaimea/ranks" alt="Total Downloads"></a>
     <a href="https://packagist.org/packages/zaimea/ranks"><img src="https://img.shields.io/packagist/v/zaimea/ranks" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/zaimea/ranks"><img src="https://img.shields.io/packagist/l/zaimea/ranks" alt="License"></a>

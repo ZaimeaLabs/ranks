@@ -7,4 +7,4 @@ sidebar: true
 rightbar: false
 ---
 
-All notable changes to ranks are documented [on GitHub](https://github.com/zaimealabs/ranks/blob/main/CHANGELOG.md)
+All notable changes to `ranks` are documented [on GitHub](https://github.com/zaimealabs/ranks/blob/main/CHANGELOG.md)
